@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Devolucion Fallos</title>
+    <meta charset="UTF-8">	
+    <title>Devolucion de Fallos</title>
     <style>
         /* Estilos para el navegador */
         .documento{
@@ -33,7 +34,7 @@
             </br>
             <label for="nombreApellido">Nombre y Apellido:</label>
             <input type="text" id="nombreApellido" name="nombreApellido">
-            <label for="numeroFallo">N˙mero de Fallo:</label>
+            <label for="numeroFallo">N√∫mero de Fallo:</label>
             <input type="text" id="numeroFallo" name="numeroFallo">
             <input type="checkbox" id="pedidoPorExp" name="pedidoPorExp">
             <label for="pedidoPorExpediente">Pedido por expediente</label>
@@ -51,16 +52,16 @@
     <div id="documento" class="">
         <img class="encabezado" src="img/head.jpg">
         </br>	
-        <p class="fecha">RÌo Cuarto, <span id="fechaElement"></span>.</p>
+        <p class="fecha">R√≠o Cuarto, <span id="fechaElement"></span>.</p>
         <p class="bolck"><span id="destinoElement"></span></p>
         <p>S_____________/_____________D</p>
-        <p>De mi mayor consideraciÛn:</p>
-        <p>    Me dirijo a Ud. por medio de la presente en razÛn del requerimiento de efectuar la remisiÛn a dicha ¡rea de las Actuaciones Administrativas enviadas a FiscalÌa Municipal para su cobro judicial en contra de: <span class="block" id="nombreApellidoElement"></span>; las cuales concluyeron con el dictado del Fallo <span class="block" id="numeroFalloElement"></span></p>
+        <p>De mi mayor consideraci√≥n:</p>
+        <p>    Me dirijo a Ud. por medio de la presente en raz√≥n del requerimiento de efectuar la remisi√≥n a dicha √Årea de las Actuaciones Administrativas enviadas a Fiscal√≠a Municipal para su cobro judicial en contra de: <span class="block" id="nombreApellidoElement"></span>; las cuales concluyeron con el dictado del Fallo <span class="block" id="numeroFalloElement"></span></p>
         
         <p id="porExpediente">En cumplimiento de ello se adjuntan a la presentes las actuaciones en original antes referidas a los fines que hubiere lugar.-</p>
-        <p id="adjuntoExpediente">Las actuaciones se encuentran en el expediente  <span id="adjuntoExpElement"></span>, por tal motivo se procede a la remisiÛn de tal.</p>
+        <p id="adjuntoExpediente">Las actuaciones se encuentran en el expediente  <span id="adjuntoExpElement"></span>, por tal motivo se procede a la remisi√≥n de tal.</p>
         </br></br>
-        <p>    Sin otro particular, saludo a Ud. con mi m·s distinguida consideraciÛn.</p>
+        <p>    Sin otro particular, saludo a Ud. con mi m√°s distinguida consideraci√≥n.</p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -112,7 +113,7 @@
       function generarDocumento(){
         document.getElementById('porExpediente').style.display = 'none';
         document.getElementById('adjuntoExpediente').style.display = 'none';
-        // Obtener los elementos span donde se reemplazar·n los valores
+        // Obtener los elementos span donde se reemplazar√°n los valores
         const fechaElement= document.getElementById('fechaElement');
         const nombreApellidoElement = document.getElementById('nombreApellidoElement');
         const numeroFalloElement = document.getElementById('numeroFalloElement');
@@ -127,12 +128,12 @@
         destinoElement.textContent = info.destino;
         adjuntoExpElement.textContent = info.adjuntoExp;
 
-        // Opcional: Mostrar el div del documento (si est· oculto inicialmente)
+        // Opcional: Mostrar el div del documento (si est√° oculto inicialmente)
         document.getElementById('ejecutador').style.display = 'none';
         document.getElementById('documento').style.display = 'block';
         info.adjuntoExp? document.getElementById('adjuntoExpediente').style.display = 'block':"";
         document.getElementById('pedidoPorExp').checked? document.getElementById('adjuntoExpediente').style.display = 'block':"";
-        // Obtener los elementos span donde se reemplazar·n los valores
+        // Obtener los elementos span donde se reemplazar√°n los valores
         window.print();
         guardar([info.fecha,info.nombreApellido,info.numeroFallo,info.destino,info.adjuntoExp]); 
         //despues le vamos a meter que si no imprime no guarde
