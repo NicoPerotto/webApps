@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cartas Enviadas</title>
+    <meta charset="UTF-8">	
+    <title>Notificaciones</title>
     <style>
         /* Estilos para el navegador */
         .documento{
@@ -60,16 +61,16 @@
 </head>
 <body>
     <div id="ejecutador" class="ejecutador">
-        <h1>Sistema de envío de Notificaciones</h1>
+        <h1>Sistema de envÃ­o de Notificaciones</h1>
             <label for="fecha">Fecha:</label>
             <input type="text" id="fecha" name="fecha">
             </br>
             <label for="nombreApellido">Nombre y Apellido:</label>
             <input type="text" id="nombreApellido" name="nombreApellido">
-            <label for="numeroFallo">Número de Fallo:</label>
+            <label for="numeroFallo">NÃºmero de Fallo:</label>
             <input type="text" id="numeroFallo" name="numeroFallo">
             </br>
-            <label for="destino">Ubicación:</label>
+            <label for="destino">UbicaciÃ³n:</label>
             <input type="text" id="destino" name="destino" value="">
             </br>
 	    <input type="button" onclick="generarDocumento()" value="Imprimir">
@@ -84,11 +85,11 @@
     <div id="documento">
         <img class="encabezado" src="img/head.jpg">
         </br>	
-        <p class="centrar"> MUNICIPALIDAD DE RÍO CUARTO </p>
-        <p class="centrar"> FISCALÍA MUNICIPAL </p>
+        <p class="centrar"> MUNICIPALIDAD DE RÃO CUARTO </p>
+        <p class="centrar"> FISCALÃA MUNICIPAL </p>
         </br>
         </br>
-        <p class="derecha">Río Cuarto, <span id="fechaElement"></span>.</p>
+        <p class="derecha">RÃ­o Cuarto, <span id="fechaElement"></span>.</p>
         <p class="derecha">Referencia: Fallo <span id="numeroFalloElement"></span> Y OTRAS.</p>
         <p class="block">Sr./a</p>
         <p class="block"><span id="nombreApellidoElement"></span></p>
@@ -96,12 +97,12 @@
         <p class="block">RIO CUARTO - CP:5800</span></p>
         </br>
         <p class="block titulo centrar">PREVIO INICIO ACCION JUDICIAL O</p>
-        <p class="block titulo centrar">CONTINUACIÓN Y EMBARGO DE BIENES</p>
+        <p class="block titulo centrar">CONTINUACIÃ“N Y EMBARGO DE BIENES</p>
 
         <div class="caja">      
-          <p class="centrar">Por medio de la presente, me dirijo a Ud. a efectos de poner en su conocimiento que al día de la fecha registra una Deuda en concepto de MULTA sancionada por el Tribunal Administrativo de Faltas Municipal, de esta Ciudad de Río Cuarto, la misma se encuentra firme y en condiciones de ser ejecutoriada .- </p>
-          <p class="centrar">Que a los fines de regularizar su situación, deberá apersonarse por ante la Oficina de  Fiscalía Municipal en el plazo de cinco (5) días de recibida la presente, sito en calle 25 de Mayo  Nº 96 - 2º Piso, de lunes a viernes de 08:00 hs. a 13:00 hs.</p>
-          <p class="centrar">Se hace saber a Ud. que de no concurrir a nuestras oficinas, se dará curso a la correspondiente acción judicial, con la consecuente traba de embargo sobre bienes de su propiedad, embargo en cuenta sueldo si existiese, inhibiciones generales, etc.-</p>
+          <p class="centrar">Por medio de la presente, me dirijo a Ud. a efectos de poner en su conocimiento que al dÃ­a de la fecha registra una Deuda en concepto de MULTA sancionada por el Tribunal Administrativo de Faltas Municipal, de esta Ciudad de RÃ­o Cuarto, la misma se encuentra firme y en condiciones de ser ejecutoriada .- </p>
+          <p class="centrar">Que a los fines de regularizar su situaciÃ³n, deberÃ¡ apersonarse por ante la Oficina de  FiscalÃ­a Municipal en el plazo de cinco (5) dÃ­as de recibida la presente, sito en calle 25 de Mayo  NÂº 96 - 2Âº Piso, de lunes a viernes de 08:00 hs. a 13:00 hs.</p>
+          <p class="centrar">Se hace saber a Ud. que de no concurrir a nuestras oficinas, se darÃ¡ curso a la correspondiente acciÃ³n judicial, con la consecuente traba de embargo sobre bienes de su propiedad, embargo en cuenta sueldo si existiese, inhibiciones generales, etc.-</p>
                                           
           <p class="centrar">QUEDA UD. DEBIDAMENTE NOTIFICADO. </p>
         </div>
@@ -117,7 +118,7 @@
         </br>
         </br>
         </br>
-        <p class="justificado">Con fecha ……………………………………, siendo las ……………………horas, me constituí en el domicilio indicado precedentemente, requiriendo la presencia del (los) interesado/s y ……………… encontrándole/s, procedí a notificar la presente, que dejé ……………………………………………………………………………………………………………………………………………………- Doy fe. </p>
+        <p class="justificado">Con fecha â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦, siendo las â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦horas, me constituÃ­ en el domicilio indicado precedentemente, requiriendo la presencia del (los) interesado/s y â€¦â€¦â€¦â€¦â€¦â€¦ encontrÃ¡ndole/s, procedÃ­ a notificar la presente, que dejÃ© â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦- Doy fe. </p>
         
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
