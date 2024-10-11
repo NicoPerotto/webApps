@@ -50,11 +50,18 @@
 	    width:30%;
       margin-left:35%;
 	}
-.documento{
-	width:600px;
-	height:1000px;
-	backgorund: red;
-}	    
+	.documento{
+		width: 100vw;
+		height: 165vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+.documento > * {
+    flex: 1;
+}
+
+	   	    
     </style>
 </head>
 <body>
@@ -82,52 +89,41 @@
     </div>  
     <div id="documento" class="documento">
         <img class="encabezado" src="img/head.jpg">
-        </br>	
 	
-        <p class="centrar"> MUNICIPALIDAD DE RÍO CUARTO </p>
-        <p class="centrar"> FISCALÍA MUNICIPAL </p>
-	<p class="centrar"> 25 de Mayo 96 2do piso - Río Cuarto &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp TEL: 4768445 </p>    
-        </br>
-        </br>
-        <p class="derecha">Río Cuarto, <span id="fechaElement"></span>.</p>
-        <p class="derecha">Referencia: Fallo <span id="numeroFalloElement"></span> Y OTRAS.</p>
-        <p class="block">Sr./a</p>
-        <p class="block"><span id="nombreApellidoElement"></span></p>
-        <p class="block"><span id="destinoElement"></span></p>
-        <p class="block">RIO CUARTO - CP:5800</span></p>
-        </br>
-        <p class="block titulo centrar">PREVIO INICIO ACCION JUDICIAL O</p>
-        <p class="block titulo centrar">CONTINUACIÓN Y EMBARGO DE BIENES</p>
+	
+        <p class="centrar"> MUNICIPALIDAD DE RÍO CUARTO <br>
+							 FISCALÍA MUNICIPAL <br>
+		25 de Mayo 96 2do piso - Río Cuarto &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp TEL: 4768445 </p>    
+
+        <p class="derecha">Río Cuarto, <span id="fechaElement"></span>.<br>
+							Referencia: Fallo <span id="numeroFalloElement"></span> Y OTRAS.</p>
+        <p class="block">Sr./a<br>
+						<span id="nombreApellidoElement"></span><br>
+						<span id="destinoElement"></span><br>
+						RIO CUARTO - CP:5800</p>
+
+        <p class="block titulo centrar">PREVIO INICIO ACCION JUDICIAL O<br>
+										CONTINUACIÓN Y EMBARGO DE BIENES</p>
 
         <div class="caja">      
           <p class="centrar">Por medio de la presente, me dirijo a Ud. a efectos de poner en su conocimiento que al día de la fecha registra una Deuda en concepto de MULTA sancionada por el Tribunal Administrativo de Faltas Municipal, de esta Ciudad de Río Cuarto, la misma se encuentra firme y en condiciones de ser ejecutoriada .- </p>
           <p class="centrar">Que a los fines de regularizar su situación, deberá apersonarse por ante la Oficina de  Fiscalía Municipal en el plazo de cinco (5) días de recibida la presente, sito en calle 25 de Mayo  Nº 96 - 2º Piso, de lunes a viernes de 08:00 hs. a 13:00 hs.</p>
           <p class="centrar">Se hace saber a Ud. que de no concurrir a nuestras oficinas, se dará curso a la correspondiente acción judicial, con la consecuente traba de embargo sobre bienes de su propiedad, embargo en cuenta sueldo si existiese, inhibiciones generales, etc.-</p>
-                                          
+          <br>                               
           <p class="centrar">QUEDA UD. DEBIDAMENTE NOTIFICADO. </p>
         </div>
 
         <p class="centrar">EN CASO DE ESTAR ABONADO, DESESTIME ESTA NOTIFICACION.</p>
-        </br>
-        </br>
+
         <img class="firma centrar" src="img/firma.jpg">
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
+ 
         <p class="justificado">Con fecha ……………………………………, siendo las ……………………horas, me constituí en el domicilio indicado precedentemente, requiriendo la presencia del (los) interesado/s y ……………… encontrándole/s, procedí a notificar la presente, que dejé ……………………………………………………………………………………………………………………………………………………- Doy fe. </p>
         
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
 
-      //limpiar();
+      limpiar();
 
       function obtenerInfo() {
         // Obtener los valores de los campos del formulario
@@ -243,15 +239,16 @@
         var info =  obtenerInfo();
         ocultarContenedores();
         document.getElementById('ejecutador').style.display = 'none';
-        document.getElementById('documento').style.display = 'block';
+        document.getElementById('documento').style.display = 'flex';
         escribirInfo(info);
             
         window.print();
-	window.print();
-        ocultarContenedores();
+		window.print();
+		ocultarContenedores();
         //Guardar info
         connect2Server("insertar",[info.fecha,info.nombreApellido,info.numeroFallo,info.destino]);
       }
+	  
       function limpiarInfo(){
         document.getElementById('fecha').value = new Date().toLocaleDateString();
         document.getElementById('nombreApellido').value = "";
