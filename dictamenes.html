@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">	
-    <title>Mi Plantilla Personalizada</title>
+    <title>Buscador de dictamenes</title>
       <style>
         /* Estilos para el navegador */
         body{
@@ -172,7 +172,7 @@
         if (resultados.length){
           for (var i = 0; i < resultados.length; i++) {
             var ress = resultados[i];
-            resultadosDiv.innerHTML += `<p id="${ress.id}" onclick="anclarDesanclarResultado('${ress.id}');mostrarAncladoDesanclado('${ress.id}')">A</p><p onclick="mostrarPdf('${ress.id}');">${ress.name}</p><br>`;
+            resultadosDiv.innerHTML += `<p>[<span id="${ress.id}" onclick="anclarDesanclarResultado('${ress.id}');mostrarAncladoDesanclado('${ress.id}')">A</span>] <span onclick="mostrarPdf('${ress.id}');">${ress.name}</span></p>`;
             mostrarAncladoDesanclado(ress.id);
           }
         }else{
